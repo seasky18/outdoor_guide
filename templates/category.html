@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="category-header">
+    <h1>{{ category.name }}</h1>
+    <p>{{ category.description }}</p>
+</div>
+
+<div class="info-section">
+    <h2>选购指南</h2>
+    <div class="guide-grid">
+        {% for key, desc in category.capacity_guide.items() %}
+        <div class="guide-item"><h3>{{ key }}</h3><p>{{ desc }}</p></div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="info-section">
+    <h2>关键参数</h2>
+    <div class="tags">
+        {% for feature in category.key_features %}
+        <span class="tag">{{ feature }}</span>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="info-section">
+    <h2>品牌推荐</h2>
+    {% for brand in category.brands %}
+    <div class="brand-card {% if brand.price_tier == 'high' %}premium{% elif brand.price_tier == 'low' %}budget{% endif %}">
+        <div class="brand-header">
+            <h3>{{ brand.name }}</h3>
+            <span class="brand-badge">{{ brand.positioning }}</span>
+        </div>
+        <div class="brand-info">
+            <span>{{ brand.country }}</span>
+            <span>￥{{ brand.price_range }}</span>
+        </div>
+        <div class="brand-tech"><strong>核心技术：</strong>{{ brand.tech }}</div>
+        <div class="brand-models">
+            <h4>推荐型号</h4>
+            <div class="models-table">
+                <table>
+                    <thead><tr><th>型号</th><th>规格</th><th>重量</th><th>价格</th><th>等级</th></tr></thead>
+                    <tbody>
+                        {% for model in brand.recommended_models %}
+                        <tr>
+                            <td><strong>{{ model.name }}</strong></td>
+                            <td>{% for k, v in model.items() %}{% if k not in ['name','weight','price','level'] %}{{ v }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}</td>
+                            <td>{{ model.weight or 'N/A' }}</td>
+                            <td class="price">￥{{ model.price }}</td>
+                            <td><span class="level-badge {{ model.level }}">{{ model.level }}</span></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="brand-pros-cons">
+            <div class="pros"><h4>优点</h4><ul>{% for pro in brand.pros %}<li>{{ pro }}</li>{% endfor %}</ul></div>
+            <div class="cons"><h4>不足</h4><ul>{% for con in brand.cons %}<li>{{ con }}</li>{% endfor %}</ul></div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

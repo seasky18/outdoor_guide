@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="routes-hero">
+    <h1>中国著名徒步路线</h1>
+    <p>从入门到专业，精选中国最值得一去的徒步登山路线</p>
+</div>
+
+<div class="routes-filter">
+    <h3>按难度筛选：</h3>
+    <button class="filter-btn active" onclick="filterRoutes('all')">全部</button>
+    <button class="filter-btn" onclick="filterRoutes('初级')">初级</button>
+    <button class="filter-btn" onclick="filterRoutes('中级')">中级</button>
+    <button class="filter-btn" onclick="filterRoutes('进阶')">进阶</button>
+    <button class="filter-btn" onclick="filterRoutes('高阶')">高阶</button>
+    <button class="filter-btn" onclick="filterRoutes('专家级')">专家级</button>
+</div>
+
+<div class="routes-grid" id="routes-grid">
+    {% for route_id, route in routes.items() %}
+    <a href="/route/{{ route_id }}" class="route-card" data-difficulty="{{ route.difficulty }}">
+        <div class="route-card-header">
+            <h3>{{ route.name }}</h3>
+            <span class="difficulty-badge {{ route.difficulty }}">{{ route.difficulty }}</span>
+        </div>
+        <p class="route-location">{{ route.location }}</p>
+        <p class="route-season">{{ route.best_season }}</p>
+        <div class="route-stats">
+            <span class="stat">{{ route.distance_km }} km</span>
+            <span class="stat">爬升 {{ route.total_ascent_m }} m</span>
+            <span class="stat">{{ route.duration }}</span>
+        </div>
+        <p class="route-desc">{{ route.description[:100] }}...</p>
+        <div class="route-highlights">
+            <strong>特色：</strong>{{ route.featured }}
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function filterRoutes(difficulty) {
+    const cards = document.querySelectorAll('.route-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    cards.forEach(card => {
+        if (difficulty === 'all' || card.dataset.difficulty === difficulty) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

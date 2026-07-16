@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="checklist-hero">
+    <h1>装备清单生成器</h1>
+    <p>根据你的行程自动生成必备装备清单</p>
+</div>
+
+<div class="checklist-form">
+    <div class="form-group"><label>活动类型：</label>
+        <select id="activity-type">
+            <option value="day_hike">一日徒步</option>
+            <option value="overnight">两日一夜露营</option>
+            <option value="multi_day">多日徒步（3-5天）</option>
+            <option value="mountain">登山（单日）</option>
+            <option value="expedition">登山远征（多天）</option>
+            <option value="winter">冬季户外</option>
+        </select>
+    </div>
+    <div class="form-group"><label>季节/气温：</label>
+        <select id="season">
+            <option value="summer">夏季（20度以上）</option>
+            <option value="spring-autumn">春秋季（0-20度）</option>
+            <option value="winter">冬季（0度以下）</option>
+        </select>
+    </div>
+    <div class="form-group"><label>同行人数：</label>
+        <select id="people-count">
+            <option value="solo">单人</option>
+            <option value="couple">2人</option>
+            <option value="group">3-5人团队</option>
+        </select>
+    </div>
+    <button onclick="generateChecklist()" class="btn btn-primary">生成装备清单</button>
+</div>
+
+<div id="checklist-result" class="checklist-result"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const checklistData = {
+    day_hike: {
+        essential: ["徒步鞋/运动鞋", "背包(20-30L)", "饮用水(1.5-2L)", "能量食物", "防晒霜", "帽子", "手机+充电宝", "简易急救包"],
+        optional: ["登山杖", "头灯", "雨衣", "墨镜", "垃圾袋", "零食"]
+    },
+    overnight: {
+        essential: ["徒步鞋", "背包(40-50L)", "帐篷", "睡袋", "睡垫", "饮用水+净水设备", "炉头套锅", "食物", "头灯", "急救包", "防晒霜", "帽子", "换洗衣物"],
+        optional: ["登山杖", "洗漱用品", "书籍", "相机", "驱蚊液"]
+    },
+    multi_day: {
+        essential: ["徒步鞋/登山鞋", "背包(50-70L)", "帐篷", "睡袋", "睡垫", "净水设备", "炉头套锅", "多天食物", "头灯", "急救包", "防晒用品", "防雨用品", "换洗衣物(2-3套)", "充电宝"],
+        optional: ["登山杖", "营地鞋", "书籍/娱乐", "相机", "洗漱套装", "晾衣绳"]
+    },
+    mountain: {
+        essential: ["登山靴", "登山包(30-50L)", "冲锋衣裤", "保暖层", "头灯", "防晒霜", "墨镜", "饮用水", "高能食物", "急救包", "登山杖", "手套"],
+        optional: ["头巾", "相机", "GPS设备", "冰爪"]
+    },
+    expedition: {
+        essential: ["高山靴", "登山包(70L+)", "四季节睡袋", "四季帐篷", "GORE-TEX冲锋衣裤", "羽绒服", "炉头套锅", "净水设备", "登山杖", "头灯", "GPS/卫星通讯", "急救包", "防晒霜", "墨镜", "高山食物", "冰爪", "冰镐"],
+        optional: ["雪套", "绳索", "上升器", "营地鞋", "卫星电话"]
+    },
+    winter: {
+        essential: ["雪地靴", "登山包", "三层穿衣系统", "羽绒服", "雪杖", "头灯", "保温壶", "高热量食物", "防寒手套", "滑雪镜", "暖宝宝", "急救包", "防晒霜"],
+        optional: ["雪套", "冰镐", "帐篷风绳加长版", "雪地垫", "暖贴"]
+    }
+};
+
+function generateChecklist() {
+    const activity = document.getElementById("activity-type").value;
+    const resultDiv = document.getElementById("checklist-result");
+    const data = checklistData[activity];
+    if (!data) { resultDiv.innerHTML = "<p class=error>请选择活动类型</p>"; return; }
+    let html = "<div class=generated-checklist><h2>你的装备清单</h2>";
+    html += "<p>活动：" + document.getElementById("activity-type").selectedOptions[0].text + " | 季节：" + document.getElementById("season").selectedOptions[0].text + "</p>";
+    html += "<div class=checklist-category><h3>必备装备</h3><ul>";
+    data.essential.forEach(function(item, i) { html += "<li><input type=checkbox id=ck" + i + "> <label for=ck" + i + ">" + item + "</label></li>"; });
+    html += "</ul></div>";
+    html += "<div class=checklist-category><h3>可选装备</h3><ul>";
+    data.optional.forEach(function(item, i) { html += "<li><input type=checkbox id=op" + i + "> <label for=op" + i + ">" + item + "</label></li>"; });
+    html += "</ul></div>";
+    const budgetMap = {
+        day_hike: {low:200,mid:800,high:2000},
+        overnight: {low:800,mid:2500,high:6000},
+        multi_day: {low:1500,mid:4000,high:10000},
+        mountain: {low:1000,mid:3000,high:8000},
+        expedition: {low:5000,mid:15000,high:40000},
+        winter: {low:1500,mid:4000,high:10000}
+    };
+    const budget = budgetMap[activity];
+    html += "<div class=budget-estimate><h3>预算估算</h3>";
+    html += "<p>入门档：约 ￥" + budget.low + " - ￥" + budget.mid + "</p>";
+    html += "<p>进阶档：约 ￥" + budget.mid + " - ￥" + budget.high + "</p>";
+    html += "<p>专业档：￥" + budget.high + "+</p></div>";
+    html += "<div class=share-section><button onclick=window.print() class=btn btn-secondary>打印清单</button></div>";
+    html += "</div>";
+    resultDiv.innerHTML = html;
+}
+</script>
+{% endblock %}

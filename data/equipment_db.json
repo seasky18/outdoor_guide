@@ -1,0 +1,1532 @@
+{
+  "backpacks": {
+    "name": "登山包",
+    "description": "登山包是户外徒步的核心装备，容量从日常小包到远征大包不等。选择合适的背包要考虑容量、背负系统、重量和贴合度。",
+    "capacity_guide": {
+      "10-20L": "一日徒步、日常通勤",
+      "20-35L": "一日长距离徒步、轻装过夜",
+      "35-50L": "两日徒步、轻装露营",
+      "50-70L": "三日以上徒步、重装露营",
+      "70L+": "长线远征、极地探险"
+    },
+    "key_features": [
+      "背负系统",
+      "容量",
+      "重量",
+      "分区设计",
+      "防雨性能",
+      "水袋兼容性"
+    ],
+    "brands": [
+      {
+        "name": "Osprey（小鹰）",
+        "country": "美国",
+        "positioning": "全能型",
+        "price_range": "500-2500元",
+        "price_tier": "mid-high",
+        "tech": "AirSpeed悬浮透气背负、Anti-Gravity全域悬浮背负",
+        "pros": [
+          "背负舒适度高",
+          "透气性好",
+          "售后服务优秀（All Mighty Guarantee终身保修）",
+          "尺码选择多"
+        ],
+        "cons": [
+          "价格偏高",
+          "部分款式重量较大"
+        ],
+        "recommended_models": [
+          {
+            "name": "Taloon 28",
+            "capacity": "28L",
+            "weight": "870g",
+            "price": 899,
+            "level": "入门"
+          },
+          {
+            "name": "Airborne 40",
+            "capacity": "40L",
+            "weight": "1385g",
+            "price": 1599,
+            "level": "进阶"
+          },
+          {
+            "name": "Ambient 65",
+            "capacity": "65L",
+            "weight": "2041g",
+            "price": 2399,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Gregory（格里高利）",
+        "country": "美国",
+        "positioning": "专业重装",
+        "price_range": "800-3000元",
+        "price_tier": "mid-high",
+        "tech": "Response AXIS自动调节背负、Reactive Suspension智能悬挂",
+        "pros": [
+          "负重性能出色",
+          "自动调节背负系统",
+          "臀部包裹性好",
+          "适合大体重用户"
+        ],
+        "cons": [
+          "自重较重",
+          "透气性一般",
+          "价格较高"
+        ],
+        "recommended_models": [
+          {
+            "name": "Zulu 45",
+            "capacity": "45L",
+            "weight": "1610g",
+            "price": 1699,
+            "level": "入门"
+          },
+          {
+            "name": "Baltic 65",
+            "capacity": "65L",
+            "weight": "2268g",
+            "price": 2599,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Deuter（多特）",
+        "country": "德国",
+        "positioning": "耐用实用",
+        "price_range": "400-2000元",
+        "price_tier": "low-mid",
+        "tech": "Aircomfort三维透气背负、Space Frame刚性强架",
+        "pros": [
+          "性价比高",
+          "非常耐用",
+          "通风效果好",
+          "品控稳定"
+        ],
+        "cons": [
+          "设计偏传统",
+          "时尚感不足",
+          "调节范围有限"
+        ],
+        "recommended_models": [
+          {
+            "name": "Aircontact 45+10",
+            "capacity": "55L",
+            "weight": "1990g",
+            "price": 1299,
+            "level": "入门"
+          },
+          {
+            "name": "Aircontact Core 65+15",
+            "capacity": "80L",
+            "weight": "2650g",
+            "price": 1899,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Arc'teryx（始祖鸟）",
+        "country": "加拿大",
+        "positioning": "高端专业",
+        "price_range": "1500-4000元",
+        "price_tier": "high",
+        "tech": "Float悬挂系统、Corbin背负",
+        "pros": [
+          "做工精致",
+          "设计理念先进",
+          "轻量化",
+          "品牌价值高"
+        ],
+        "cons": [
+          "价格昂贵",
+          "耐用性一般",
+          "性价比不高"
+        ],
+        "recommended_models": [
+          {
+            "name": "Bora AR 50",
+            "capacity": "50L",
+            "weight": "1560g",
+            "price": 3599,
+            "level": "专业"
+          },
+          {
+            "name": "Graviton 26",
+            "capacity": "26L",
+            "weight": "730g",
+            "price": 2199,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "凯乐石(KAILAS)",
+        "country": "中国",
+        "positioning": "国产专业",
+        "price_range": "300-1500元",
+        "price_tier": "low-mid",
+        "tech": "4D智适应悬挂系统、FUGA轻量背负",
+        "pros": [
+          "性价比高",
+          "专为亚洲人身形设计",
+          "登山系列专业",
+          "国货之光"
+        ],
+        "cons": [
+          "品牌影响力较弱",
+          "耐用性待验证",
+          "设计偏实用"
+        ],
+        "recommended_models": [
+          {
+            "name": "FUGA 30L",
+            "capacity": "30L",
+            "weight": "780g",
+            "price": 599,
+            "level": "入门"
+          },
+          {
+            "name": "MONT X 50+5",
+            "capacity": "55L",
+            "weight": "1650g",
+            "price": 1299,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "黑冰(Black Ice)",
+        "country": "中国",
+        "positioning": "高性价比",
+        "price_range": "200-800元",
+        "price_tier": "low",
+        "tech": "X-frame外框架设计",
+        "pros": [
+          "极其便宜",
+          "重量可控",
+          "适合预算有限的新手"
+        ],
+        "cons": [
+          "做工一般",
+          "舒适度有限",
+          "不适合长时间重载"
+        ],
+        "recommended_models": [
+          {
+            "name": "鹰击35",
+            "capacity": "35L",
+            "weight": "950g",
+            "price": 399,
+            "level": "入门"
+          },
+          {
+            "name": "鹰击55",
+            "capacity": "55L",
+            "weight": "1380g",
+            "price": 699,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "trekking_poles": {
+    "name": "登山杖",
+    "description": "登山杖可以有效减轻膝盖30%以上的压力，提高徒步稳定性和效率。正确使用双杖是户外基本功。",
+    "capacity_guide": {
+      "单杖": "辅助平衡、探路",
+      "双杖": "标准配置，显著减轻膝盖压力、增加推力"
+    },
+    "key_features": [
+      "材质",
+      "重量",
+      "折叠方式",
+      "锁定系统",
+      "手柄材质"
+    ],
+    "brands": [
+      {
+        "name": "LEKI（雷琦）",
+        "country": "德国",
+        "positioning": "专业顶级",
+        "price_range": "400-1200元/对",
+        "price_tier": "mid-high",
+        "tech": "MicroLock快速锁定系统、Wrist-Link腕带系统",
+        "pros": [
+          "锁定可靠",
+          "人体工学优秀",
+          "减震效果好",
+          "德国精工"
+        ],
+        "cons": [
+          "价格高",
+          "维修配件需官方渠道"
+        ],
+        "recommended_models": [
+          {
+            "name": "MT Base Carbon",
+            "material": "碳纤维",
+            "weight": "380g/根",
+            "folds": "三折",
+            "price": 899,
+            "level": "进阶"
+          },
+          {
+            "name": "Vario Carbon X-Tip",
+            "material": "碳纤维",
+            "weight": "350g/根",
+            "folds": "三折",
+            "price": 1099,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Lululemon/Black Diamond（黑钻）",
+        "country": "美国",
+        "positioning": "专业可靠",
+        "price_range": "300-800元/对",
+        "price_tier": "mid",
+        "tech": "FastLock锁定、PowerCore减震",
+        "pros": [
+          "性价比高",
+          "锁定简单可靠",
+          "种类丰富"
+        ],
+        "cons": [
+          "轻量化版本贵",
+          "腕带设计一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "Trail Pro Carbon",
+            "material": "碳纤维",
+            "weight": "408g/根",
+            "folds": "三折",
+            "price": 699,
+            "level": "进阶"
+          },
+          {
+            "name": "Aluminum Trail",
+            "material": "铝合金",
+            "weight": "510g/根",
+            "folds": "三折",
+            "price": 399,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "凯乐石(KAILAS)",
+        "country": "中国",
+        "positioning": "国产性价比",
+        "price_range": "150-400元/对",
+        "price_tier": "low",
+        "tech": "快拆锁定系统",
+        "pros": [
+          "价格便宜",
+          "够用",
+          "适合新手"
+        ],
+        "cons": [
+          "重量偏重",
+          "精细度一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "FUGA超轻登山杖",
+            "material": "碳纤维",
+            "weight": "420g/根",
+            "folds": "三折",
+            "price": 299,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "小帽山(Cantizao)",
+        "country": "中国",
+        "positioning": "极致性价比",
+        "price_range": "80-200元/对",
+        "price_tier": "low",
+        "tech": "常规旋钮锁定",
+        "pros": [
+          "极其便宜",
+          "功能齐全",
+          "坏了不心疼"
+        ],
+        "cons": [
+          "重量大",
+          "锁定可靠性一般",
+          "不适合高强度使用"
+        ],
+        "recommended_models": [
+          {
+            "name": "碳纤维超轻款",
+            "material": "碳纤维",
+            "weight": "450g/根",
+            "folds": "三折",
+            "price": 158,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "jackets": {
+    "name": "冲锋衣",
+    "description": "冲锋衣是户外服装的核心，提供防风防水透气的保护。分为硬壳(Hard Shell)、软壳(Soft Shell)和羽绒服三类。",
+    "capacity_guide": {
+      "硬壳": "防风防水，应对恶劣天气，透气性相对较差",
+      "软壳": "灵活透气，轻度防泼水，适合干燥凉爽天气",
+      "羽绒服": "保暖为主，应对低温环境，不防水"
+    },
+    "key_features": [
+      "防水指数",
+      "透气指数",
+      "重量",
+      "面料技术",
+      "压胶工艺"
+    ],
+    "brands": [
+      {
+        "name": "Arc'teryx（始祖鸟）",
+        "country": "加拿大",
+        "positioning": "顶级专业",
+        "price_range": "2000-5000元",
+        "price_tier": "high",
+        "tech": "GORE-PRO面料、Weatherhood三维风帽、Watertight防水拉链",
+        "pros": [
+          "做工顶级",
+          "设计合理",
+          "轻便高效",
+          "品牌价值"
+        ],
+        "cons": [
+          "价格极高",
+          "耐用性不如预期",
+          "维修贵"
+        ],
+        "recommended_models": [
+          {
+            "name": "Beta AR",
+            "type": "硬壳",
+            "waterproof": "20000mm",
+            "breathability": "25000g",
+            "weight": "495g",
+            "price": 4580,
+            "level": "专业"
+          },
+          {
+            "name": "Atom LT",
+            "type": "棉服",
+            "waterproof": "DWR",
+            "breathability": "高",
+            "weight": "405g",
+            "price": 3299,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Patagonia（巴塔哥尼亚）",
+        "country": "美国",
+        "positioning": "环保专业",
+        "price_range": "1500-3500元",
+        "price_tier": "mid-high",
+        "tech": "H2NO防水、NetPlus再生材料、Fair Trade认证缝制",
+        "pros": [
+          "环保理念",
+          "耐用性好",
+          "透气不错",
+          "修复服务"
+        ],
+        "cons": [
+          "版型偏美码",
+          "价格波动大"
+        ],
+        "recommended_models": [
+          {
+            "name": "Storm Rain Shadow",
+            "type": "硬壳",
+            "waterproof": "10000mm",
+            "breathability": "7500g",
+            "weight": "340g",
+            "price": 2299,
+            "level": "进阶"
+          },
+          {
+            "name": "Nano Puff",
+            "type": "棉服",
+            "waterproof": "DWR",
+            "breathability": "中",
+            "weight": "272g",
+            "price": 2199,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "Mammut（猛犸象）",
+        "country": "瑞士",
+        "positioning": "专业全能",
+        "price_range": "1000-3000元",
+        "price_tier": "mid",
+        "tech": "Seclash无缝拼接、Smartshell面料",
+        "pros": [
+          "瑞士品质",
+          "登山系列专业",
+          "设计均衡"
+        ],
+        "cons": [
+          "国内渠道少",
+          "售后不便"
+        ],
+        "recommended_models": [
+          {
+            "name": "MH FS Hooded Jacket",
+            "type": "软壳",
+            "waterproof": "防泼水",
+            "breathability": "高",
+            "weight": "335g",
+            "price": 1599,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "凯乐石(KAILAS)",
+        "country": "中国",
+        "positioning": "国产专业",
+        "price_range": "500-2000元",
+        "price_tier": "low-mid",
+        "tech": "FGP防水透气膜、3L/2.5L分层结构",
+        "pros": [
+          "性价比高",
+          "专为亚洲人身形",
+          "登山系列专业",
+          "GORE-TEX版本可选"
+        ],
+        "cons": [
+          "高端线知名度低",
+          "细节待提升"
+        ],
+        "recommended_models": [
+          {
+            "name": "FGP三合一冲锋衣",
+            "type": "三合一",
+            "waterproof": "10000mm",
+            "breathability": "5000g",
+            "weight": "780g",
+            "price": 999,
+            "level": "入门"
+          },
+          {
+            "name": "MONT GORE-TEX",
+            "type": "硬壳",
+            "waterproof": "28000mm",
+            "breathability": "20000g",
+            "weight": "420g",
+            "price": 1999,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "探路者(Toread)",
+        "country": "中国",
+        "positioning": "大众普及",
+        "price_range": "300-1000元",
+        "price_tier": "low",
+        "tech": "Tefontex自主防水技术",
+        "pros": [
+          "价格便宜",
+          "门店多",
+          "适合偶尔户外活动"
+        ],
+        "cons": [
+          "专业度一般",
+          "透气防水中等"
+        ],
+        "recommended_models": [
+          {
+            "name": "三合一冲锋衣",
+            "type": "三合一",
+            "waterproof": "5000mm",
+            "breathability": "3000g",
+            "weight": "850g",
+            "price": 599,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "boots": {
+    "name": "登山鞋",
+    "description": "登山鞋提供脚踝保护、防滑抓地和脚部防护。根据地形和负重分为轻量徒步鞋、中帮徒步鞋和高帮登山靴。",
+    "capacity_guide": {
+      "轻量徒步鞋": "成熟步道、轻装一日徒步",
+      "中帮徒步鞋": "复杂路况、中等负重",
+      "高帮登山靴": "雪地、冰川、重装长线"
+    },
+    "key_features": [
+      "鞋底抓地力",
+      "防水性能",
+      "脚踝支撑",
+      "重量",
+      "透气性"
+    ],
+    "brands": [
+      {
+        "name": "Scarpa（斯卡帕）",
+        "country": "意大利",
+        "positioning": "专业顶级",
+        "price_range": "1000-3000元",
+        "price_tier": "mid-high",
+        "tech": "Vibram MT系列底、Drynet防水内衬",
+        "pros": [
+          "意大利工艺",
+          "抓地力优秀",
+          "登山靴系列权威",
+          "耐穿"
+        ],
+        "cons": [
+          "需要磨合期",
+          "价格高"
+        ],
+        "recommended_models": [
+          {
+            "name": "Kailash GTX",
+            "type": "中帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Vibram",
+            "price": 2199,
+            "level": "进阶"
+          },
+          {
+            "name": "Mont Blanc Ultra Power GTX",
+            "type": "高帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Vibram",
+            "price": 2899,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Salomon（萨洛蒙）",
+        "country": "法国",
+        "positioning": "轻量竞速",
+        "price_range": "600-1500元",
+        "price_tier": "mid",
+        "tech": "Contagrip外底、Advanced Chassis动态稳定",
+        "pros": [
+          "轻量化",
+          "上手无需磨合",
+          "越野跑基因",
+          "颜值高"
+        ],
+        "cons": [
+          "耐用性一般",
+          "重装支撑不足"
+        ],
+        "recommended_models": [
+          {
+            "name": "X Ultra 4 GTX",
+            "type": "中帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Contagrip",
+            "price": 1099,
+            "level": "入门"
+          },
+          {
+            "name": "Quest 4 GTX",
+            "type": "高帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Contagrip",
+            "price": 1499,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "Merrell（迈乐）",
+        "country": "美国",
+        "positioning": "性价比之王",
+        "price_range": "400-900元",
+        "price_tier": "low",
+        "tech": "Vibram底（部分款）、WaterProtect防水",
+        "pros": [
+          "便宜大碗",
+          "无需磨合",
+          "舒适度高"
+        ],
+        "cons": [
+          "专业度一般",
+          "防水版本透气差"
+        ],
+        "recommended_models": [
+          {
+            "name": "Moab 3 GTX",
+            "type": "中帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Vibram",
+            "price": 799,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "Lowa（罗瓦）",
+        "country": "德国",
+        "positioning": "德系精工",
+        "price_range": "1000-2500元",
+        "price_tier": "mid-high",
+        "tech": "Recco反射器、GTX内衬、RapidSystem快速系系统",
+        "pros": [
+          "德国制造",
+          "支撑性极佳",
+          "非常适合重装",
+          "耐穿"
+        ],
+        "cons": [
+          "重",
+          "需要磨合",
+          "贵"
+        ],
+        "recommended_models": [
+          {
+            "name": "Renegade GTX Mid",
+            "type": "中帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Vibram",
+            "price": 1699,
+            "level": "进阶"
+          },
+          {
+            "name": "Zugspitze GTX Hi",
+            "type": "高帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Vibram",
+            "price": 2399,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "凯乐石(KAILAS)",
+        "country": "中国",
+        "positioning": "国产专业",
+        "price_range": "400-1200元",
+        "price_tier": "low-mid",
+        "tech": "自研FUGA大底、GTX防水版本",
+        "pros": [
+          "性价比高",
+          "专为亚洲脚型",
+          "登山靴线专业"
+        ],
+        "cons": [
+          "品牌认知度低",
+          "做工细节一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "FGA Lite GTX",
+            "type": "中帮",
+            "waterproof": "GORE-TEX",
+            "sole": "自研",
+            "price": 899,
+            "level": "入门"
+          },
+          {
+            "name": "MONT B3",
+            "type": "高帮",
+            "waterproof": "GORE-TEX",
+            "sole": "Vibram",
+            "price": 1299,
+            "level": "进阶"
+          }
+        ]
+      }
+    ]
+  },
+  "tents": {
+    "name": "帐篷",
+    "description": "帐篷是野外庇护所的核心。根据重量、空间和季节适应性分为超轻帐、三季帐和四季帐。",
+    "capacity_guide": {
+      "1人帐": "单人轻量化徒步",
+      "2人帐": "双人徒步，可放装备",
+      "3人帐": "双人+装备或三人紧凑",
+      "多人帐": "家庭露营、基地营"
+    },
+    "key_features": [
+      "人数",
+      "重量",
+      "双层/单层",
+      "防水指数",
+      "搭建便利性"
+    ],
+    "brands": [
+      {
+        "name": "MSR",
+        "country": "美国",
+        "positioning": "可靠专业",
+        "price_range": "800-3500元",
+        "price_tier": "mid-high",
+        "tech": "DAC杆材、Press-Fit插杆设计",
+        "pros": [
+          "极其可靠",
+          "搭建简单",
+          "抗风性好",
+          "口碑佳"
+        ],
+        "cons": [
+          "价格偏高",
+          "重量控制一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "Hubba Hubba NX 2",
+            "persons": "2人",
+            "weight": "1710g",
+            "waterproof": "3000mm",
+            "price": 2699,
+            "level": "进阶"
+          },
+          {
+            "name": "Lightning 1",
+            "persons": "1人",
+            "weight": "680g",
+            "waterproof": "3000mm",
+            "price": 2999,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "Big Agnes",
+        "country": "美国",
+        "positioning": "轻量化先锋",
+        "price_range": "1000-3000元",
+        "price_tier": "mid-high",
+        "tech": "Titanium杆材、SynchroLite搭建系统",
+        "pros": [
+          "轻量化出色",
+          "空间利用率高",
+          "颜值高"
+        ],
+        "cons": [
+          "耐用性一般",
+          "贵",
+          "防风性弱于MSR"
+        ],
+        "recommended_models": [
+          {
+            "name": "Copper Spur HV UL2",
+            "persons": "2人",
+            "weight": "907g",
+            "waterproof": "1200mm",
+            "price": 2999,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "牧高笛(Mobi Garden)",
+        "country": "中国",
+        "positioning": "国民品牌",
+        "price_range": "200-1000元",
+        "price_tier": "low",
+        "tech": "冷风系列通风设计",
+        "pros": [
+          "性价比极高",
+          "门店多",
+          "适合新手入门"
+        ],
+        "cons": [
+          "重量偏重",
+          "高端线弱"
+        ],
+        "recommended_models": [
+          {
+            "name": "冷风M2",
+            "persons": "2人",
+            "weight": "2200g",
+            "waterproof": "3000mm",
+            "price": 399,
+            "level": "入门"
+          },
+          {
+            "name": "笛云Pro",
+            "persons": "3人",
+            "weight": "2800g",
+            "waterproof": "5000mm",
+            "price": 799,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "凯乐石(KAILAS)",
+        "country": "中国",
+        "positioning": "专业登山",
+        "price_range": "500-2000元",
+        "price_tier": "low-mid",
+        "tech": "航空铝杆、YKK拉链",
+        "pros": [
+          "登山线专业",
+          "抗风性好",
+          "国货性价比"
+        ],
+        "cons": [
+          "重量控制一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "ALPHA阿尔法系列",
+            "persons": "2人",
+            "weight": "1500g",
+            "waterproof": "5000mm",
+            "price": 1599,
+            "level": "进阶"
+          }
+        ]
+      }
+    ]
+  },
+  "sleeping_bags": {
+    "name": "睡袋",
+    "description": "睡袋提供野外睡眠保温。关键指标是温标（舒适温度、极限温度）和填充物（羽绒vs化纤）。",
+    "capacity_guide": {
+      "夏用(0℃以上)": "夏季徒步、空调房",
+      "三季(-5℃至10℃)": "春秋徒步、大多数季节",
+      "冬季(-15℃至-5℃)": "高海拔、冬季户外",
+      "极寒(-15℃以下)": "极地、珠峰级别"
+    },
+    "key_features": [
+      "温标",
+      "填充物(羽绒/化纤)",
+      "蓬松度",
+      "重量",
+      "形状"
+    ],
+    "brands": [
+      {
+        "name": "Marmot（土拨鼠）",
+        "country": "美国",
+        "positioning": "专业可靠",
+        "price_range": "500-2500元",
+        "price_tier": "mid",
+        "tech": "ThermoHollow棉填充、Down Defender防绒处理",
+        "pros": [
+          "性价比高",
+          "舒适性好",
+          "耐用"
+        ],
+        "cons": [
+          "羽绒款较重",
+          "压缩体积小"
+        ],
+        "recommended_models": [
+          {
+            "name": "Trestles 20",
+            "fill": "化纤",
+            "temp": "-6℃",
+            "weight": "1198g",
+            "price": 799,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "Sea to Summit",
+        "country": "澳大利亚",
+        "positioning": "轻量高端",
+        "price_range": "1000-4000元",
+        "price_tier": "high",
+        "tech": "800+蓬松度鹅绒、Tempsaver压缩技术",
+        "pros": [
+          "极致轻量化",
+          "超高蓬松度",
+          "压缩后体积极小"
+        ],
+        "cons": [
+          "价格极高",
+          "化纤款性价比低"
+        ],
+        "recommended_models": [
+          {
+            "name": "TLR Summit SV",
+            "fill": "800鹅绒",
+            "temp": "-15℃",
+            "weight": "780g",
+            "price": 3990,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "黑冰(Black Ice)",
+        "country": "中国",
+        "positioning": "羽绒性价比王",
+        "price_range": "300-1200元",
+        "price_tier": "low",
+        "tech": "800/900蓬松度鹅绒、防钻绒面料",
+        "pros": [
+          "同级别最便宜",
+          "蓬松度高",
+          "轻量化做得好"
+        ],
+        "cons": [
+          "做工一般",
+          "防潮需自己注意"
+        ],
+        "recommended_models": [
+          {
+            "name": "F800",
+            "fill": "800鹅绒",
+            "temp": "-15℃",
+            "weight": "980g",
+            "price": 899,
+            "level": "进阶"
+          },
+          {
+            "name": "B700",
+            "fill": "700鹅绒",
+            "temp": "-7℃",
+            "weight": "1200g",
+            "price": 599,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "凯乐石(KAILAS)",
+        "country": "中国",
+        "positioning": "专业登山",
+        "price_range": "500-2000元",
+        "price_tier": "low-mid",
+        "tech": "800蓬松度鹅绒",
+        "pros": [
+          "登山睡袋专业",
+          "性价比高"
+        ],
+        "cons": [
+          "民用线选择少"
+        ],
+        "recommended_models": [
+          {
+            "name": "CHALLENGER系列",
+            "fill": "鹅绒",
+            "temp": "-10℃",
+            "weight": "1350g",
+            "price": 1299,
+            "level": "进阶"
+          }
+        ]
+      }
+    ]
+  },
+  "shoes": {
+    "name": "徒步鞋",
+    "description": "日常徒步穿着的鞋子，比登山鞋轻量，适合成熟步道和轻装出行。",
+    "capacity_guide": {
+      "越野跑鞋": "高速通过地形、轻装快速徒步",
+      "低帮徒步鞋": "成熟步道、一日徒步",
+      "中帮徒步鞋": "复杂路况、有一定负重"
+    },
+    "key_features": [
+      "抓地力",
+      "防水",
+      "重量",
+      "透气性",
+      "舒适度"
+    ],
+    "brands": [
+      {
+        "name": "Salomon（萨洛蒙）",
+        "country": "法国",
+        "positioning": "轻量运动",
+        "price_range": "400-1200元",
+        "price_tier": "mid",
+        "tech": "Contagrip大底、Advanced Chassis稳定系统",
+        "pros": [
+          "颜值高",
+          "无需磨合",
+          "轻量化",
+          "越野基因强"
+        ],
+        "cons": [
+          "耐用性一般",
+          "防水款透气差"
+        ],
+        "recommended_models": [
+          {
+            "name": "X Ultra 4 GTX",
+            "type": "中帮",
+            "waterproof": "GORE-TEX",
+            "price": 1099,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "Hoka One One",
+        "country": "法国",
+        "positioning": "缓震旗舰",
+        "price_range": "800-1300元",
+        "price_tier": "mid-high",
+        "tech": "Meta-Rocker滚动平衡科技",
+        "pros": [
+          "缓震极佳",
+          "走路省力",
+          "适合长距离"
+        ],
+        "cons": [
+          "不耐磨",
+          "抓地力一般",
+          "外观争议"
+        ],
+        "recommended_models": [
+          {
+            "name": "Speedgoat 5",
+            "type": "越野跑鞋",
+            "waterproof": "无",
+            "price": 1199,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "Merrell（迈乐）",
+        "country": "美国",
+        "positioning": "性价比",
+        "price_range": "300-800元",
+        "price_tier": "low",
+        "tech": "Vibram底（部分款）",
+        "pros": [
+          "便宜",
+          "舒适",
+          "无需磨合"
+        ],
+        "cons": [
+          "专业度一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "Moab 3",
+            "type": "低帮",
+            "waterproof": "GTX可选",
+            "price": 699,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "sleeping_mats": {
+    "name": "睡垫",
+    "description": "睡垫提供隔绝地面寒冷和增加睡眠舒适度的作用，常被新手忽略但非常重要。",
+    "capacity_guide": {
+      "泡沫垫": "极简轻量、备用",
+      "自充垫": "方便舒适、重量适中",
+      "充气垫": "最轻便、舒适度最高"
+    },
+    "key_features": [
+      "R值(隔热)",
+      "重量",
+      "厚度",
+      "收纳体积",
+      "充气方式"
+    ],
+    "brands": [
+      {
+        "name": "Therm-a-Rest（热平衡）",
+        "country": "美国",
+        "positioning": "行业标杆",
+        "price_range": "200-1500元",
+        "price_tier": "mid-high",
+        "tech": "Restlite自充、NeoAir充气系列",
+        "pros": [
+          "行业标杆",
+          "R值准确",
+          "耐用性好"
+        ],
+        "cons": [
+          "充气款有漏气风险",
+          "价格高"
+        ],
+        "recommended_models": [
+          {
+            "name": "Rest Lite SM",
+            "type": "自充",
+            "R_value": 2.1,
+            "weight": "415g",
+            "price": 599,
+            "level": "入门"
+          },
+          {
+            "name": "NeoAir FL",
+            "type": "充气",
+            "R_value": 1.3,
+            "weight": "190g",
+            "price": 1199,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "黑冰(Black Ice)",
+        "country": "中国",
+        "positioning": "性价比",
+        "price_range": "100-400元",
+        "price_tier": "low",
+        "tech": "XPE发泡材料",
+        "pros": [
+          "极其便宜",
+          "不用充气",
+          "耐用"
+        ],
+        "cons": [
+          "体积大",
+          "舒适度一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "EVA泡沫垫",
+            "type": "泡沫",
+            "R_value": 1.5,
+            "weight": "300g",
+            "price": 59,
+            "level": "入门"
+          },
+          {
+            "name": "自充垫",
+            "type": "自充",
+            "R_value": 2.5,
+            "weight": "650g",
+            "price": 259,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "stoves": {
+    "name": "炉头套锅",
+    "description": "野外烹饪装备，包括炉头、气罐和套锅。选择时考虑重量、火力、燃料类型和稳定性。",
+    "capacity_guide": {
+      "一体式炉头": "超轻徒步、一人食",
+      "分体式炉头": "稳定性好、适合大风环境",
+      "野营套锅": "多人团队使用"
+    },
+    "key_features": [
+      "功率",
+      "重量",
+      "折叠方式",
+      "燃料类型",
+      "点火方式"
+    ],
+    "brands": [
+      {
+        "name": "Jetboil",
+        "country": "美国",
+        "positioning": "便捷高效",
+        "price_range": "400-900元",
+        "price_tier": "mid",
+        "tech": "FluxRing导热技术、集成系统设计",
+        "pros": [
+          "烧水极快",
+          "集成度高",
+          "省气"
+        ],
+        "cons": [
+          "不可维修部件多",
+          "烹饪功能有限"
+        ],
+        "recommended_models": [
+          {
+            "name": "Flash",
+            "power": "1000W",
+            "weight": "340g",
+            "boil_time": "100ml/min",
+            "price": 698,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "Snow Peak",
+        "country": "日本",
+        "positioning": "精致生活",
+        "price_range": "300-1000元",
+        "price_tier": "mid-high",
+        "tech": "钛合金材质、精密加工",
+        "pros": [
+          "颜值极高",
+          "钛合金轻便",
+          "做工精致"
+        ],
+        "cons": [
+          "价格虚高",
+          "易凹损"
+        ],
+        "recommended_models": [
+          {
+            "name": "Ti-150 Mini",
+            "power": "150W",
+            "weight": "65g",
+            "boil_time": "慢",
+            "price": 499,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "爱迪生/火枫(Fire-Maple)",
+        "country": "中国",
+        "positioning": "国产性价比",
+        "price_range": "50-300元",
+        "price_tier": "low",
+        "tech": "常规燃气炉头技术",
+        "pros": [
+          "便宜",
+          "配件齐全",
+          "够用"
+        ],
+        "cons": [
+          "精细化一般"
+        ],
+        "recommended_models": [
+          {
+            "name": "FMD-220",
+            "power": "3000W",
+            "weight": "115g",
+            "boil_time": "快",
+            "price": 128,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "water_filter": {
+    "name": "净水设备",
+    "description": "野外水源净化装备，包括滤水器、净水药片和便携UV消毒笔。确保饮水安全至关重要。",
+    "capacity_guide": {
+      "滤水器": "即时过滤，可直饮",
+      "净水药片": "轻量备用，需等待30分钟",
+      "UV消毒笔": "快速杀菌，需清水"
+    },
+    "key_features": [
+      "过滤精度",
+      "流速",
+      "重量",
+      "寿命",
+      "细菌去除率"
+    ],
+    "brands": [
+      {
+        "name": "Katadyn",
+        "country": "瑞士",
+        "positioning": "专业净水",
+        "price_range": "200-800元",
+        "price_tier": "mid",
+        "tech": "Hiker滤心、Mirror玻璃滤芯",
+        "pros": [
+          "过滤精度高",
+          "瑞士品质",
+          "可靠"
+        ],
+        "cons": [
+          "需定期更换滤心"
+        ],
+        "recommended_models": [
+          {
+            "name": "BeFree 1L",
+            "type": "软壶过滤",
+            "flow_rate": "快",
+            "weight": "117g",
+            "price": 399,
+            "level": "入门"
+          }
+        ]
+      },
+      {
+        "name": "MSR",
+        "country": "美国",
+        "positioning": "可靠专业",
+        "price_range": "200-600元",
+        "price_tier": "mid",
+        "tech": "HyperFlow高速过滤系统",
+        "pros": [
+          "产品线全",
+          "可靠性好"
+        ],
+        "cons": [
+          "价格偏高"
+        ],
+        "recommended_models": [
+          {
+            "name": "MiniWorm",
+            "type": "便携过滤",
+            "flow_rate": "中",
+            "weight": "65g",
+            "price": 199,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "headlamps": {
+    "name": "头灯",
+    "description": "夜间活动必备装备。关注亮度、续航、模式和重量。",
+    "capacity_guide": {
+      "100-200流明": "应急备用",
+      "200-400流明": "一般夜走",
+      "400流明以上": "专业夜爬、长时间夜间作业"
+    },
+    "key_features": [
+      "亮度",
+      "续航",
+      "防水等级",
+      "重量",
+      "红光模式"
+    ],
+    "brands": [
+      {
+        "name": "Petzl（攀索）",
+        "country": "法国",
+        "positioning": "专业顶级",
+        "price_range": "100-400元",
+        "price_tier": "mid",
+        "tech": "ASTRAL智能调光、Power Rush节能技术",
+        "pros": [
+          "专业可靠",
+          "照明效果好",
+          "防水优秀"
+        ],
+        "cons": [
+          "假货多",
+          "价格波动"
+        ],
+        "recommended_models": [
+          {
+            "name": "ACTIK CORE 400",
+            "lumens": 400,
+            "battery": "内置充电",
+            "weight": "108g",
+            "price": 349,
+            "level": "进阶"
+          }
+        ]
+      },
+      {
+        "name": "黑鹅灯(国产仿制)",
+        "country": "中国",
+        "positioning": "极致性价比",
+        "price_range": "30-80元",
+        "price_tier": "low",
+        "tech": "国产LED方案",
+        "pros": [
+          "极其便宜",
+          "亮度够用",
+          "坏了不心疼"
+        ],
+        "cons": [
+          "质量不稳定",
+          "续航虚标"
+        ],
+        "recommended_models": [
+          {
+            "name": "黑鹅灯3.0",
+            "lumens": 1000,
+            "battery": "18650",
+            "weight": "45g",
+            "price": 45,
+            "level": "入门"
+          }
+        ]
+      }
+    ]
+  },
+  "navigation": {
+    "name": "导航装备",
+    "description": "户外导航是安全保证。包括指南针、GPS设备和离线地图。",
+    "capacity_guide": {
+      "手机+离线地图": "入门级，需备充电宝",
+      "手持GPS": "专业级，长续航",
+      "指南针+纸质地图": "基础技能，必学"
+    },
+    "key_features": [
+      "精度",
+      "续航",
+      "地图更新",
+      "防水",
+      "轨迹记录"
+    ],
+    "brands": [
+      {
+        "name": "Garmin（佳明）",
+        "country": "美国",
+        "positioning": "GPS权威",
+        "price_range": "1000-4000元",
+        "price_tier": "high",
+        "tech": "Multi-band GNSS、TracBack路由",
+        "pros": [
+          "精准可靠",
+          "续航长",
+          "地图详细"
+        ],
+        "cons": [
+          "价格高",
+          "操作复杂"
+        ],
+        "recommended_models": [
+          {
+            "name": "GPSMAP 66i",
+            "gps": "多星",
+            "battery": "40h",
+            "waterproof": "IPX7",
+            "price": 3280,
+            "level": "专业"
+          }
+        ]
+      },
+      {
+        "name": "两步路/六只脚(App)",
+        "country": "中国",
+        "positioning": "免费APP",
+        "price_range": "免费",
+        "price_tier": "free",
+        "tech": "社区轨迹、离线地图",
+        "pros": [
+          "免费",
+          "国内轨迹丰富",
+          "社区活跃"
+        ],
+        "cons": [
+          "依赖手机",
+          "耗电大"
+        ],
+        "recommended_models": [
+          {
+            "name": "两步路APP",
+            "gps": "手机GPS",
+            "battery": "看手机",
+            "waterproof": "无",
+            "price": 0,
+            "level": "免费"
+          }
+        ]
+      }
+    ]
+  }
+}

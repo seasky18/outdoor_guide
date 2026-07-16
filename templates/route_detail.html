@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="route-detail-hero">
+    <h1>{{ route.name }}</h1>
+    <div class="route-meta">
+        <span>{{ route.location }}</span>
+        <span class="difficulty-badge {{ route.difficulty }}">{{ route.difficulty }}</span>
+        <span>{{ route.elevation }}</span>
+    </div>
+    <p class="route-intro">{{ route.description }}</p>
+</div>
+
+<!-- 基本信息 -->
+<div class="route-info-section">
+    <h2>基本信息</h2>
+    <div class="info-grid">
+        <div class="info-item"><strong>总路程</strong><span>{{ route.distance_km }} 公里</span></div>
+        <div class="info-item"><strong>累计爬升</strong><span>{{ route.total_ascent_m }} 米</span></div>
+        <div class="info-item"><strong>建议用时</strong><span>{{ route.duration }}</span></div>
+        <div class="info-item"><strong>最佳季节</strong><span>{{ route.best_season }}</span></div>
+        <div class="info-item"><strong>海拔</strong><span>{{ route.elevation }}</span></div>
+        <div class="info-item"><strong>特色</strong><span>{{ route.featured }}</span></div>
+    </div>
+</div>
+
+<!-- 路线详情 -->
+<div class="route-info-section">
+    <h2>推荐路线</h2>
+    {% for rt in route.routes %}
+    <div class="route-detail-card">
+        <h3>{{ rt.name }}</h3>
+        <span class="route-type-badge">{{ rt.type }}</span>
+        <div class="route-summary">
+            <span>{{ rt.distance_km }} km</span>
+            <span>爬升 {{ rt.ascent_m }} m</span>
+            <span>耗时 {{ rt.time_hours }}</span>
+        </div>
+
+        <!--  waypoints -->
+        <h4>途经节点</h4>
+        <div class="waypoint-timeline">
+            {% for wp in rt.waypoints %}
+            <div class="waypoint-item">
+                <div class="waypoint-dot"></div>
+                <div class="waypoint-info">
+                    <strong>{{ wp.name }}</strong>
+                    <span class="waypoint-elev">{{ wp.elevation }}</span>
+                    <p>{{ wp.note }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 下撤点 -->
+        <div class="emergency-section">
+            <h4>紧急下撤点</h4>
+            {% for exit in rt.emergency_exit %}
+            <div class="exit-item">
+                <strong>{{ exit.name }}</strong>
+                <p>{{ exit.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 露营和补给 -->
+        <div class="support-section">
+            <div class="support-item">
+                <h4>露营</h4>
+                <p>{{ rt.camping }}</p>
+            </div>
+            <div class="support-item">
+                <h4>补给</h4>
+                <p>{{ rt.supply }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- 交通和住宿 -->
+<div class="route-info-section">
+    <h2>交通与住宿</h2>
+    <div class="transport-hotel">
+        <div class="th-item">
+            <h4>交通</h4>
+            <p>{{ route.transport.到达 }}</p>
+        </div>
+        <div class="th-item">
+            <h4>住宿</h4>
+            <p>{{ route.transport.住宿 }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- 注意事项 -->
+<div class="route-info-section">
+    <h2>注意事项</h2>
+    <ul class="tips-list">
+        {% for tip in route.tips %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- 推荐装备 -->
+<div class="route-info-section">
+    <h2>推荐装备</h2>
+    <p>根据此路线的难度和时长，建议准备以下装备：</p>
+    <div class="gear-tags">
+        {% if route.difficulty == '初级' %}
+        <span class="gear-tag">徒步鞋</span>
+        <span class="gear-tag">双肩背包(20-30L)</span>
+        <span class="gear-tag">饮用水</span>
+        <span class="gear-tag">防晒用品</span>
+        <span class="gear-tag">登山杖</span>
+        <span class="gear-tag">雨衣</span>
+        {% elif route.difficulty == '中级' %}
+        <span class="gear-tag">登山鞋</span>
+        <span class="gear-tag">双肩背包(40-50L)</span>
+        <span class="gear-tag">冲锋衣裤</span>
+        <span class="gear-tag">保暖层</span>
+        <span class="gear-tag">头灯</span>
+        <span class="gear-tag">登山杖</span>
+        <span class="gear-tag">净水设备</span>
+        <span class="gear-tag">急救包</span>
+        {% elif route.difficulty == '进阶' %}
+        <span class="gear-tag">高山靴</span>
+        <span class="gear-tag">登山包(50-70L)</span>
+        <span class="gear-tag">GORE-TEX冲锋衣裤</span>
+        <span class="gear-tag">羽绒服</span>
+        <span class="gear-tag">睡袋</span>
+        <span class="gear-tag">帐篷</span>
+        <span class="gear-tag">炉头套锅</span>
+        <span class="gear-tag">头灯</span>
+        <span class="gear-tag">登山杖</span>
+        <span class="gear-tag">防晒用品</span>
+        <span class="gear-tag">卫星通讯设备</span>
+        {% else %}
+        <span class="gear-tag">专业登山装备</span>
+        <span class="gear-tag">高山靴</span>
+        <span class="gear-tag">登山包(70L+)</span>
+        <span class="gear-tag">四季节帐篷</span>
+        <span class="gear-tag">-15℃睡袋</span>
+        <span class="gear-tag">GORE-TEX冲锋衣裤</span>
+        <span class="gear-tag">羽绒服</span>
+        <span class="gear-tag">冰爪/冰镐</span>
+        <span class="gear-tag">卫星电话</span>
+        <span class="gear-tag">急救包</span>
+        {% endif %}
+    </div>
+    <a href="/" class="btn btn-primary" style="margin-top:1rem;">查看所有装备推荐</a>
+</div>
+{% endblock %}

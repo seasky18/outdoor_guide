@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="compare-hero">
+    <h1>装备对比工具</h1>
+    <p>横向比较同品类不同品牌和型号</p>
+</div>
+
+<div class="compare-section">
+    <div class="compare-selector">
+        <h3>选择要对比的品类：</h3>
+        <select id="compare-category" onchange="loadCompareModels()">
+            <option value="">-- 请选择 --</option>
+            {% for cat_key, cat in categories.items() %}
+            <option value="{{ cat_key }}">{{ cat.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div id="compare-results" class="compare-results"></div>
+</div>
+
+<div class="compare-tips">
+    <h2>对比小贴士</h2>
+    <ul>
+        <li>同价位对比：关注性价比最高的选项</li>
+        <li>同功能对比：关注重量和耐用性的差异</li>
+        <li>新手优先：舒适度 > 重量 > 价格</li>
+        <li>老手优先：重量 > 性能 > 价格</li>
+    </ul>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+const categoriesData = {{ categories|tojson }};
+function loadCompareModels() {
+    const catKey = document.getElementById("compare-category").value;
+    const resultDiv = document.getElementById("compare-results");
+    if (!catKey || !categoriesData[catKey]) {
+        resultDiv.innerHTML = "<p style=\"color:#999;padding:1rem;text-align:center;\">请选择一个品类进行对比</p>";
+        return;
+    }
+    const cat = categoriesData[catKey];
+    let html = "<h2>" + cat.name + " - 品牌对比</h2>";
+    html += "<p>" + cat.description + "</p>";
+    html += "<div class=\"comparison-table\"><table><thead><tr><th>品牌</th><th>国家</th><th>定位</th><th>价格区间</th><th>核心技术</th><th>优点</th><th>缺点</th></tr></thead><tbody>";
+    cat.brands.forEach(function(brand) {
+        html += "<tr>";
+        html += "<td><strong>" + brand.name + "</strong></td>";
+        html += "<td>" + brand.country + "</td>";
+        html += "<td><span class=\"level-badge\">" + brand.positioning + "</span></td>";
+        html += "<td>" + brand.price_range + "</td>";
+        const tech = brand.tech && brand.tech.length > 50 ? brand.tech.substring(0,50)+"..." : brand.tech;
+        html += "<td>" + tech + "</td>";
+        html += "<td>" + brand.pros.slice(0,2).join("; ") + "</td>";
+        html += "<td>" + brand.cons.slice(0,2).join("; ") + "</td>";
+        html += "</tr>";
+    });
+    html += "</tbody></table></div>";
+    resultDiv.innerHTML = html;
+}
+</script>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h1>欢迎使用户外装备入门指南</h1>
+    <p class="subtitle">无论你是登山小白还是进阶玩家，这里都能帮你找到合适的装备</p>
+    <div class="hero-actions">
+        <a href="/guide" class="btn btn-primary">新手入门指南</a>
+        <a href="#categories" class="btn btn-secondary">浏览装备品类</a>
+    </div>
+</section>
+
+<section class="quick-recommend" id="quick-rec">
+    <h2>快速推荐</h2>
+    <div class="recommend-form">
+        <label>你的预算（元）：</label>
+        <select id="budget-select">
+            <option value="1000">1000元以内</option>
+            <option value="3000" selected>3000元左右</option>
+            <option value="5000">5000元左右</option>
+            <option value="10000">10000元左右</option>
+            <option value="20000">20000元以上</option>
+        </select>
+        <button onclick="getRecommendations()" class="btn btn-primary">获取推荐</button>
+    </div>
+    <div id="recommendations-result" class="recommendations-grid"></div>
+</section>
+
+<section class="categories" id="categories">
+    <h2>装备品类</h2>
+    <div class="category-grid">
+        {% for cat_key, cat in categories.items() %}
+        <a href="/category/{{ cat_key }}" class="category-card">
+            <h3>{{ cat.name }}</h3>
+            <p class="card-desc">{{ cat.description[:80] }}...</p>
+            <div class="card-meta">
+                <span>{{ cat.brands|length }} 个品牌</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="tips">
+    <h2>选购建议</h2>
+    <div class="tips-grid">
+        <div class="tip-card"><h3>量力而行</h3><p>新手不必一步到位购买顶级装备，根据实际使用频率和预算选择合适档位。</p></div>
+        <div class="tip-card"><h3>试穿很重要</h3><p>鞋子、背包等贴身装备一定要试穿，每个人的身形不同，适合别人的不一定适合你。</p></div>
+        <div class="tip-card"><h3>安全第一</h3><p>在恶劣环境下，专业装备是安全保障。登山、雪地等活动不要省钱。</p></div>
+        <div class="tip-card"><h3>循序渐进</h3><p>先买必备基础装备，通过实际使用了解需求后再升级，避免浪费。</p></div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function getRecommendations() {
+    const budget = document.getElementById("budget-select").value;
+    const resultDiv = document.getElementById("recommendations-result");
+    resultDiv.innerHTML = "<p class=loading>正在为你推荐...</p>";
+    try {
+        const response = await fetch("/api/recommend", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({budget: parseInt(budget)})
+        });
+        const data = await response.json();
+        if (data.success) {
+            let html = "";
+            for (const [key, rec] of Object.entries(data.data)) {
+                html += "<div class=rec-category><h3>" + rec.category_name + "</h3>";
+                rec.models.forEach(function(m) {
+                    html += "<div class=rec-item><strong>" + m.brand + "</strong> - " + m.name + "<br>";
+                    html += "<span class=price>￥" + m.price + "</span>";
+                    if (m.capacity) html += "<span class=spec>" + m.capacity + "</span>";
+                    if (m.weight) html += "<span class=spec>" + m.weight + "</span>";
+                    html += "</div>";
+                });
+                html += "</div>";
+            }
+            resultDiv.innerHTML = html || "<p>抱歉，没有找到符合你预算的推荐</p>";
+        }
+    } catch (e) {
+        resultDiv.innerHTML = "<p class=error>获取推荐失败，请稍后重试</p>";
+    }
+}
+</script>
+{% endblock %}

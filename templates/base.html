@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">户外装备入门指南</a>
+            <div class="nav-links">
+                <a href="/">装备总览</a>
+                <a href="/guide">新手指南</a>
+                <a href="/compare">装备对比</a>
+                <a href="/routes">徒步路线</a>
+                <a href="/checklist">装备清单</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>户外装备入门指南 | 帮助你选择合适的户外装备</p>
+        <p>户外有风险，出发需谨慎</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
